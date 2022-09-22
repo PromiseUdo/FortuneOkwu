@@ -2,6 +2,12 @@ module.exports = {
   content: ['./*.html'],
   darkMode: 'class',
   theme: {
+    screens: {
+      sm: '480px',
+      md: '768px',
+      lg: '976px',
+      xl: '1440px',
+    },
     extend: {
       colors: {
         darkBlue: 'rgb(10, 25, 47)',
