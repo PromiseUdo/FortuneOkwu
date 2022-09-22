@@ -23,7 +23,7 @@ module.exports = {
         projectDescBgColor: 'rgb(17, 34, 64)',
       },
       fontFamily: {
-        sans: ['Raleway', 'sans-serif'],
+        sans: ['Poppins', 'sans-serif'],
         opensans: ['Source Code Pro', 'monospace'],
       },
       backgroundImage: (theme) => ({
