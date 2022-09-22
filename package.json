@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-  "engines":{
-    "node":"17.9.0"
-  },
   "scripts": {
     "build": "tailwindcss -i ./input.css -o ./public/css/style.css",
     "watch": "tailwindcss -i ./input.css -o ./public/css/style.css --watch",
