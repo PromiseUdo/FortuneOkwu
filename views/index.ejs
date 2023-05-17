@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth transition-all dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&family=Source+Code+Pro&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <script src="/js/script.js" defer></script>
+    <title>Fortune Okwu</title>
+  </head>
+  <body class="dark:bg-darkBlue dark:text-white font-sans">
+    <section>
+      <!-- Header -->
+      <header class="max-w-6xl mx-auto px-6 py-6">
+        <nav class="flex items-center justify-between font-bold">
+          <!-- Dark/Light Mode Logo -->
+          <!-- <img src="images/logo.png" alt=""> -->
+          <div class="bg-logo-dark-mode bg-no-repeat h-20 w-48"></div>
+          <!-- Menu -->
+          <div class="hidden h-10 items-center md:flex md:space-x-8">
+            <div class="group">
+              <a
+                href="#about"
+                class="group-hover:text-primary text-sm font-opensans"
+                >About</a
+              >
+              <div
+                class="mx-2 group-hover:border-b group-hover:border-primary"
+              ></div>
+            </div>
+            <div class="group">
+              <a
+                href="#projects"
+                class="group-hover:text-primary text-sm font-opensans"
+                >Projects</a
+              >
+              <div
+                class="mx-2 group-hover:border-b group-hover:border-primary"
+              ></div>
+            </div>
+            <div class="group">
+              <a
+                href="/posts"
+                class="group-hover:text-primary text-sm font-opensans"
+                >Blog</a
+              >
+              <div
+                class="mx-2 group-hover:border-b group-hover:border-primary"
+              ></div>
+            </div>
+            <div class="group">
+              <a
+                href="#contact"
+                class="group-hover:text-primary text-sm font-opensans"
+                >Contact</a
+              >
+              <div
+                class="mx-2 group-hover:border-b group-hover:border-primary"
+              ></div>
+            </div>
+            <a
+              download
+              href="/FortuneOkwuCV.pdf"
+              target="_blank"
+              class="bg-darkBlue btns border border-primary rounded-sm px-4 py-2 text-primary transition-all hover:bg-primary hover:bg-opacity-5 text-sm font-opensans"
+            >
+              Resume
+            </a>
+          </div>
+          <!-- Hamburger Button -->
+          <div class="md:hidden">
+            <button
+              id="menu-btn"
+              type="button"
+              class="z-40 block hamburger md:hidden focus outline-none"
+            >
+              <span class="hamburger-top"></span>
+              <span class="hamburger-middle"></span>
+              <span class="hamburger-bottom"></span>
+            </button>
+          </div>
+        </nav>
+        <div
+          id="menu"
+          class="absolute hidden right-0 bottom-0 left-0 flex-col self-end w-full min-h-screen py-1 pt-40 p-12 space-y-3 text-lg bg-black"
+        >
+          <a href="" class="hover:text-primary font-opensans">About</a>
+          <a href="" class="hover:text-primary font-opensans">Projects</a>
+          <a href="" class="hover:text-primary font-opensans">Blog</a>
+          <a href="" class="hover:text-primary font-opensans">Contact</a>
+
+          <!-- Mobile Dark/Light Mode Button -->
+          <button
+            id="theme-toggle"
+            class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"
+          >
+            <!-- Dark SVG Icon -->
+            <svg
+              id="theme-toggle-dark-icon"
+              class="w-5 h-5 hidden"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+              ></path>
+            </svg>
+            <!-- Light SVG Icon -->
+            <svg
+              id="theme-toggle-light-icon"
+              class="w-5 h-5"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </header>
+    </section>
+
+    <!-- Hero Section -->
+    <section id="hero">
+      <!-- Hero Container -->
+      <div class="max-w-6xl flex space-y-8 container mx-auto px-6 py-6">
+        <!-- Content Container -->
+        <div class="flex flex-col space-y-6 items-start">
+          <p class="text-primary font-sans">I am</p>
+          <h1 class="text-5xl font-bold lg:text-7xl lg:text-left font-sans">
+            Fortune Okwu. <br /><span class="text-grayTextColor"
+              >I build software products.</span
+            >
+          </h1>
+          <p class="max-w-lg text-grayTextColor font-sans">
+            I am a software engineer that specializes in building human
+            centered, collaborative and networking software products.
+          </p>
+          <a
+            href="mailto:fortuneokwu@gmail.com"
+            class="cursor-pointer hover:bg-primary hover:bg-opacity-5 border border-primary text-lg px-4 py-2 rounded-sm font-opensans text-primary transition-all"
+            >Let's work together!</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about">
+      <!-- About Me Container -->
+      <div class="mx-auto max-w-6xl container my-32 px-6 text-grayTextColor">
+        <!-- header -->
+        <div class="flex justify-center sm:justify-between md:gap-x-20">
+          <div class="flex justify-between items-center space-x-8">
+            <h2
+              class="font-sans text-grayHeadingColor text-lg text-center md:text-left sm:text-3xl font-bold"
+            >
+              About Me
+            </h2>
+            <div class="w-28 sm:w-72 border border-gray-700"></div>
+          </div>
+        </div>
+        <!-- Item Container -->
+        <div
+          class="container items-center md:items-start flex flex-col mx-auto mt-8 w-full space-x-8 text-grayTextColor md:flex-row md:space-x-16"
+        >
+          <!-- Content Container -->
+          <div class="md:w-1/2 text-center sm:text-left">
+            <div class="flex flex-col space-y-2">
+              <p class="mb-3 font-sans">
+                Hello! My name is Fortune Okwu. A seasoned, forward-looking
+                software engineer who enjoys creating and executing innovative
+                software solutions. Highly experienced in all aspects of the
+                software development lifecycle and end-to-end project
+                management, from concept through to development and delivery.
+              </p>
+              <p class="mb-3">
+                I have the ability to coordinate cross-functional teams in a
+                fast-paced environment with deadlines to complete projects on
+                time and within budget constraints.
+              </p>
+              <p class="mb-3">
+                I have worked in the software industry for over 7 years and
+                owned and managed a successful software development company
+                <span
+                  class="text-primary hover:cursor-pointer hover:underline hover:underline-offset-4"
+                  >(Drumbell Technologies Limited)</span
+                >, I am excited by new opportunities and passionate about
+                working with like-minded people to create innovative software
+                solutions.
+              </p>
+            </div>
+          </div>
+          <!-- Image Container -->
+          <div class="relative text-center lg:mb-0 md:w-1/2 pt-10">
+            <img
+              src="/images/fortuneokwu.jpeg"
+              id="profileImage"
+              class="relative z-99 w-80 ficonImage transition-all"
+              alt=""
+            />
+            <div
+              class="hidden sm:block absolute border-2 border-primary -z-10 h-64 w-72 top-11 left-12 md:top-5"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <!-- Projects Container -->
+      <div class="container max-w-6xl mx-auto px-6 text-grayTextColor">
+        <!-- About Me Header -->
+        <!-- header -->
+        <div class="flex justify-center sm:justify-between md:gap-x-20">
+          <div class="flex justify-between items-center space-x-8">
+            <h2
+              class="font-sans text-grayHeadingColor text-lg text-center md:text-left sm:text-3xl font-bold"
+            >
+              Projects I've built
+            </h2>
+            <div class="w-28 sm:w-72 border border-gray-700"></div>
+          </div>
+        </div>
+        <!-- Item Container -->
+        <div
+          class="relative container flex flex-col max-w-6xl mx-auto mt-5 my-40 sm:mt-20 px-6 text-gray-900 md:flex-row md:px-0"
+        >
+          <!-- Image -->
+          <img
+            class="max-w-2xl ficon transition-all duration-500"
+            src="/images/drumbell_screenshot.png"
+            alt=""
+          />
+          <!-- Text Container -->
+          <div class="mt-2 md:mt-0">
+            <div
+              class="top-20 pr-0 py-2 md:absolute md:right-0 md:px-6 md:py-6 md:pl-20"
+            >
+              <p class="text-primary text-left sm:text-right font-opensans">
+                Featured Project
+              </p>
+              <p class="text-xl text-grayHeadingColor">Drumbell Social Media</p>
+            </div>
+            <div
+              class="dark:bg-projectDescBgColor top-40 px-4 py-4 text-white md:absolute md:right-0 md:px-6 md:py-6 md:pl-20"
+            >
+              <p
+                class="font-sans max-w-md text-center md:text-right text-grayTextColor"
+              >
+                Founded in 2011, Loopstudios has been producing world-class
+                virtual reality projects for some of the best companies around
+                the globe. Our award-winning creations have transformed
+                businesses through digital experiences that bind to their brand.
+              </p>
+              <a href="" class=""
+                ><svg
+                  style="color: white"
+                  class="w-6 h-6 ficon"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"
+                  ></path>
+                  <path
+                    d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"
+                  ></path></svg
+              ></a>
+            </div>
+          </div>
+        </div>
+        <!-- Item Container -->
+        <div
+          class="relative container flex flex-col max-w-6xl mx-auto my-40 px-6 text-gray-900 md:flex-row-reverse md:px-0"
+        >
+          <!-- Image -->
+          <img
+            class="max-w-2xl ficon transition-all duration-500"
+            src="/images/bloomgram.png"
+            alt=""
+          />
+          <!-- Text Container -->
+          <div class="mt-2 md:mt-0">
+            <div
+              class="top-20 pl-0 py-2 md:absolute md:left-0 md:px-6 md:py-6 md:pr-20"
+            >
+              <p class="text-primary text-left font-opensans">
+                Featured Project
+              </p>
+              <p class="text-xl text-grayHeadingColor">Bloomgram</p>
+            </div>
+            <div
+              class="dark:bg-projectDescBgColor top-40 px-4 py-4 text-white md:absolute md:left-0 md:px-6 md:py-6 md:pr-20"
+            >
+              <p
+                class="font-sans max-w-md text-center md:text-left text-grayTextColor"
+              >
+                Founded in 2011, Loopstudios has been producing world-class
+                virtual reality projects for some of the best companies around
+                the globe. Our award-winning creations have transformed
+                businesses through digital experiences that bind to their brand.
+              </p>
+              <a href="" class=""
+                ><svg
+                  style="color: white"
+                  class="w-6 h-6 ficon"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"
+                  ></path>
+                  <path
+                    d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"
+                  ></path></svg
+              ></a>
+            </div>
+          </div>
+        </div>
+        <!-- Item Container -->
+        <div
+          class="relative container flex flex-col max-w-6xl mx-auto my-40 px-6 text-gray-900 md:flex-row md:px-0"
+        >
+          <!-- Image -->
+          <img
+            class="max-w-2xl ficon transition-all duration-500"
+            src="/images/drumbell_advocacy.png"
+            alt=""
+          />
+          <!-- Text Container -->
+          <div class="mt-2 md:mt-0">
+            <div
+              class="top-20 pr-0 py-2 md:absolute md:right-0 md:px-6 md:py-6 md:pl-20"
+            >
+              <p class="text-primary text-left sm:text-right font-opensans">
+                Featured Project
+              </p>
+              <p class="text-xl text-grayHeadingColor">
+                Drumbell Advocacy Foundation
+              </p>
+            </div>
+            <div
+              class="dark:bg-projectDescBgColor top-40 pr-0 px-4 py-4 text-white md:absolute md:right-0 md:px-6 md:py-6 md:pl-20"
+            >
+              <p
+                class="font-sans max-w-md text-center md:text-right text-grayTextColor"
+              >
+                Founded in 2011, Loopstudios has been producing world-class
+                virtual reality projects for some of the best companies around
+                the globe. Our award-winning creations have transformed
+                businesses through digital experiences that bind to their brand.
+              </p>
+              <a href="" class=""
+                ><svg
+                  style="color: white"
+                  class="w-6 h-6 ficon"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"
+                  ></path>
+                  <path
+                    d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"
+                  ></path></svg
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Get In Touch Section -->
+    <section id="contact">
+      <div class="my-32 flex flex-col p-2 space-y-8 items-center">
+        <h2 class="mx-auto space-y-10 text-5xl font-bold text-center font-sans">
+          Get In Touch
+        </h2>
+        <p
+          class="max-w-xs mx-auto text-center md:max-w-md text-grayTextColor font-sans"
+        >
+          My inbox is always open. Whether you have a question or just want to
+          say hi, I’ll try my best to get back to you!
+        </p>
+
+        <a
+          href="mailto:fortuneokwu@gmail.com"
+          class="cursor-pointer md:max-w-lg border border-primary text-lg px-4 py-2 rounded-sm font-opensans text-primary transition-all hover:bg-primary hover:bg-opacity-5"
+          >Send A Message</a
+        >
+      </div>
+    </section>
+    <!-- Footer section -->
+    <footer class="bg-black">
+      <div class="container max-w-6xl py-10 mx-auto">
+        <!-- Footer flex container -->
+        <div
+          class="flex flex-col items-center mb-8 space-y-6 md:flex-row md:space-y-0 md:justify-between md:items-start"
+        >
+          <!-- Menu and Logo -->
+          <div
+            class="flex flex-col items-center space-y-8 md:items-start md-space-y-4"
+          >
+            <!-- Logo -->
+            <div class="h-8">
+              <!-- <div class="bg-logo-dark-mode bg-no-repeat h-20 w-48"></div> -->
+
+              <!-- <img src="assets/images/logo.svg" alt="" class="w-44 md:ml-3"> -->
+            </div>
+            <!-- Men -->
+            <div
+              class="flex flex-col items-center space-y-4 font-bold text-white md:flex-row md:space-y-0 md:space-x-6 md:ml-3"
+            >
+              <!-- Item 1 -->
+              <div class="h-10 group">
+                <a
+                  href="#about"
+                  class="text-sm group-hover:text-primary font-opensans"
+                  >About</a
+                >
+                <div
+                  class="mx-2 group-hover:border-b group-hover:border-primary"
+                ></div>
+              </div>
+              <!-- Item 2 -->
+              <div class="h-10 group">
+                <a
+                  href="#projects"
+                  class="text-sm group-hover:text-primary font-opensans"
+                  >Projects</a
+                >
+                <div
+                  class="mx-2 group-hover:border-b group-hover:border-primary"
+                ></div>
+              </div>
+              <!-- Item 3 -->
+              <div class="h-10 group">
+                <a
+                  href="/blog"
+                  class="text-sm group-hover:text-primary font-opensans"
+                  >Blog</a
+                >
+                <div
+                  class="mx-2 group-hover:border-b group-hover:border-primary"
+                ></div>
+              </div>
+              <!-- Item 4 -->
+              <div class="h-10 group">
+                <a
+                  href="#contact"
+                  class="text-sm group-hover:text-primary font-opensans"
+                  >Contact</a
+                >
+                <div
+                  class="mx-2 group-hover:border-b group-hover:border-primary"
+                ></div>
+              </div>
+            </div>
+          </div>
+          <!-- Social and Copy -->
+          <div
+            class="flex flex-col align-items justify-between space-y-4 text-gray-500"
+          >
+            <!-- Icons container -->
+            <div
+              class="flex items-center justify-center space-x-4 md:justify-start"
+            >
+              <!-- icon 1 -->
+              <div class="h-8 group">
+                <a href="">
+                  <img
+                    src="/images/icon-linkedin.svg"
+                    alt=""
+                    class="h-6 ficon"
+                  />
+                </a>
+              </div>
+              <!-- icon 1 -->
+              <div class="h-8 group">
+                <a href="">
+                  <img
+                    src="/images/icon-twitter.svg"
+                    alt=""
+                    class="h-6 ficon"
+                  />
+                </a>
+              </div>
+              <!-- icon 1 -->
+              <div class="h-8 group">
+                <a href="">
+                  <img
+                    src="/images/icon-instagram.svg"
+                    alt=""
+                    class="h-6 ficon"
+                  />
+                </a>
+              </div>
+            </div>
+            <!-- Copyright -->
+            <div class="font-bold font-sans">
+              &copy; 2022 Fortune Okwu. All Rights Reserved
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
