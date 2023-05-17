@@ -24,13 +24,13 @@ app.use(express.urlencoded({ extended: true }));
 app.get("/", (req, res) => {
   res.setHeader("Content-Type", "text/html");
   res.setHeader("Cache-Control", "s-max-age=1, stale-while-revalidate");
-  res.render("index.ejs");
+  res.end("index.ejs");
 });
 
 app.get("/posts", (req, res) => {
   res.setHeader("Content-Type", "text/html");
   res.setHeader("Cache-Control", "s-max-age=1, stale-while-revalidate");
-  res.render("posts.ejs");
+  res.end("posts.ejs");
 });
 app.listen(PORT, () => {
   console.log("App started on port 3001");
